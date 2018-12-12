@@ -20,7 +20,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 // EDUARDO
 Route::resources([
-    'course' => 'AuditCourseController',   
+    'course' => 'AuditCourseController',  
+    'personal' => 'AuditReportPersonalDataController' 
 ]);
 
 Route::get('filter/{filter}','AuditCourseController@getCourseOrInstitution');
